@@ -34,6 +34,8 @@ function updateStep() {
   sectionNav.hidden = currentStep === 0;
   headerTitle.hidden = currentStep !== 0;
   document.querySelectorAll(".intro-copy").forEach(paragraph => { paragraph.hidden = currentStep !== 0; });
+  // Remove the entire intro card on Sections 2 and 3 so no empty white panel remains below the navigation.
+  document.querySelector("#intro").hidden = currentStep !== 0;
   // Keep the main promotional heading and hourly-rate badge on Section 1 only.
   document.querySelector("#intro h1").hidden = currentStep !== 0;
   document.querySelector("#intro .rate").hidden = currentStep !== 0;
