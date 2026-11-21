@@ -16,9 +16,7 @@
     <a class="brand" href="#top" aria-label="In Home Help Agency home"><img src="assets/ihha-logo-white.png" alt="IHHA In Home Help Agency"></a>
     <div class="header-title" id="header-title">Become a Paid Family Caregiver</div>
     <nav class="header-nav" id="section-nav" aria-label="Agency navigation" hidden>
-      <a href="#top">Apply for Home Help Services</a>
       <a class="current" href="#top" aria-current="page">Become a Paid Family Caregiver</a>
-      <a href="tel:2482751102">Contact Us</a>
     </nav>
     <a class="header-phone" href="tel:2482751102">248 275 1102</a>
   </header>
@@ -35,9 +33,9 @@
       <div class="intro" id="intro">
         <h1>Become a Paid Family Caregiver</h1>
         <p class="rate">$18 and up per hour</p>
-        <p><strong>INSTRUCTIONS:</strong> Please fill out all the information in Section 1 and Section 2. The caregiver must sign and date to be considered complete.</p>
-        <p>Already caring for a loved one? You may qualify for opportunities to become a paid family caregiver.</p>
-        <p>As part of Home Help Services Program, In Home Help Agency is required to conduct applicable background checks before caregivers are eligible to begin working for a client. Successfully passing these background checks is a condition of employment with the client.</p>
+        <p class="intro-copy"><strong>INSTRUCTIONS:</strong> Please fill out all the information in Section 1 and Section 2. The caregiver must sign and date to be considered complete.</p>
+        <p class="intro-copy">Already caring for a loved one? You may qualify for opportunities to become a paid family caregiver.</p>
+        <p class="intro-copy">As part of Home Help Services Program, In Home Help Agency is required to conduct applicable background checks before caregivers are eligible to begin working for a client. Successfully passing these background checks is a condition of employment with the client.</p>
       </div>
 
       <div class="progress-wrap" aria-label="Application progress">
@@ -117,8 +115,7 @@
           <div class="subsection">
             <h3>ADDITIONAL INFORMATION</h3>
             <div class="field-grid two-col">
-              <fieldset><legend>Do you need Medicaid? <span>*</span></legend><label class="inline-choice"><input type="radio" name="needsMedicaid" value="Yes" required> Yes</label><label class="inline-choice"><input type="radio" name="needsMedicaid" value="No"> No</label></fieldset>
-              <fieldset><legend>Do you have a Primary Care Doctor? <span>*</span></legend><label class="inline-choice"><input type="radio" name="hasPrimaryDoctor" value="Yes" required> Yes</label><label class="inline-choice"><input type="radio" name="hasPrimaryDoctor" value="No"> No</label></fieldset>
+              <fieldset class="full"><legend>Do you have a Primary Care Doctor?</legend><label class="inline-choice"><input type="radio" name="hasPrimaryDoctor" value="Yes"> Yes</label><label class="inline-choice"><input type="radio" name="hasPrimaryDoctor" value="No"> No</label></fieldset>
               <label class="doctor-field full" hidden>Doctor Name<input name="doctorName"></label>
               <label class="doctor-field" hidden>Doctor Phone or Fax #<input name="doctorPhoneFax" type="tel"></label>
               <label class="full">Case Manager or Caseworker Name<input name="caseManagerName"></label>
@@ -127,7 +124,7 @@
             </div>
           </div>
           <div class="authorization final-authorization">
-            <label class="check-row"><input type="checkbox" name="homeHelpDeclaration" required><span>I wish to apply for home help services - adult services programs. I certify that the information I have given is correct. I acknowledge that I have read and agree to the application. <b>*</b></span></label>
+            <label class="check-row"><input type="checkbox" name="homeHelpDeclaration" required><span>I certify that the information I have given is correct. I acknowledge that I have read and agree to the application. <b>*</b></span></label>
           </div>
           <div class="form-actions"><button class="button secondary" type="button" data-prev>Previous</button><button class="button primary" type="submit" id="submit-button">Submit Application</button></div>
         </section>

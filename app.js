@@ -33,6 +33,10 @@ function updateStep() {
   const headerTitle = document.querySelector("#header-title");
   sectionNav.hidden = currentStep === 0;
   headerTitle.hidden = currentStep !== 0;
+  document.querySelectorAll(".intro-copy").forEach(paragraph => { paragraph.hidden = currentStep !== 0; });
+  // Keep the main promotional heading and hourly-rate badge on Section 1 only.
+  document.querySelector("#intro h1").hidden = currentStep !== 0;
+  document.querySelector("#intro .rate").hidden = currentStep !== 0;
   progressFill.style.width = `${percent}%`;
   stepLabel.textContent = `Section ${currentStep + 1} of ${steps.length} · ${stepNames[currentStep]}`;
   progressTrack.setAttribute("aria-valuenow", String(percent));
@@ -73,7 +77,7 @@ form.querySelectorAll('input[name="hasPrimaryDoctor"]').forEach(radio => radio.a
   document.querySelectorAll(".doctor-field").forEach(field => {
     field.hidden = !show;
     const input = field.querySelector("input");
-    input.required = show;
+    input.required = false;
     if (!show) input.value = "";
   });
 }));
@@ -100,7 +104,7 @@ form.addEventListener("submit", async event => {
   event.preventDefault();
   if (!validateStep(currentStep)) return;
   if (!API_URL) {
-    showError("The form is ready for integration, but the agency API endpoint has not been configured yet. Please provide the API URL and documentation before accepting real applications.");
+    showError("Online application submission is not available right now. Your application has not been sent. Please contact our office at 248 275 1102 for assistance.");
     return;
   }
   if (!API_URL.startsWith("https://")) {
