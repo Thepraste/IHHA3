@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09285f">
+  <meta name="description" content="Apply to become a paid family caregiver with In Home Help Agency.">
+  <title>Become a Paid Family Caregiver | IHHA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="In Home Help Agency home"><img src="assets/ihha-logo-white.png" alt="IHHA In Home Help Agency"></a>
+    <div class="header-title" id="header-title">Become a Paid Family Caregiver</div>
+    <nav class="header-nav" id="section-nav" aria-label="Agency navigation" hidden>
+      <a href="#top">Apply for Home Help Services</a>
+      <a class="current" href="#top" aria-current="page">Become a Paid Family Caregiver</a>
+      <a href="tel:2482751102">Contact Us</a>
+    </nav>
+    <a class="header-phone" href="tel:2482751102">248 275 1102</a>
+  </header>
+
+  <main id="top" class="page-shell">
+    <aside class="promo-panel" aria-label="Paid family caregiver information">
+      <picture>
+        <source media="(max-width: 700px)" srcset="assets/promo-mobile.jpeg">
+        <img src="assets/promo-desktop.jpeg" alt="Become a paid family caregiver. Get paid to care for your loved one.">
+      </picture>
+    </aside>
+
+    <section class="application-area">
+      <div class="intro" id="intro">
+        <h1>Become a Paid Family Caregiver</h1>
+        <p class="rate">$18 and up per hour</p>
+        <p><strong>INSTRUCTIONS:</strong> Please fill out all the information in Section 1 and Section 2. The caregiver must sign and date to be considered complete.</p>
+        <p>Already caring for a loved one? You may qualify for opportunities to become a paid family caregiver.</p>
+        <p>As part of Home Help Services Program, In Home Help Agency is required to conduct applicable background checks before caregivers are eligible to begin working for a client. Successfully passing these background checks is a condition of employment with the client.</p>
+      </div>
+
+      <div class="progress-wrap" aria-label="Application progress">
+        <div class="progress-meta"><span id="step-label" aria-live="polite">Section 1 of 3 · Client information</span><span id="progress-percent">33%</span></div>
+        <div class="progress-track" role="progressbar" aria-label="Application progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="33"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+
+      <form id="caregiver-form" novalidate>
+        <!-- STEP 1 -->
+        <section class="form-step active" data-step="0" aria-labelledby="section-one-title">
+          <h2 id="section-one-title">SECTION 1: CLIENT INFORMATION</h2>
+          <div class="field-grid two-col">
+            <label>Client First Name <span>*</span><input name="initialClientFirstName" autocomplete="given-name" required></label>
+            <label>Client Last Name <span>*</span><input name="initialClientLastName" autocomplete="family-name" required></label>
+          </div>
+          <div class="form-actions"><span></span><button class="button primary" type="button" data-next>Next</button></div>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="form-step" data-step="1" aria-labelledby="section-two-title" hidden>
+          <h2 id="section-two-title">SECTION 2: CAREGIVER INFORMATION</h2>
+          <div class="field-grid two-col">
+            <label>Caregiver First Name <span>*</span><input name="caregiverFirstName" autocomplete="given-name" required></label>
+            <label>Caregiver Last Name <span>*</span><input name="caregiverLastName" autocomplete="family-name" required></label>
+            <label class="full">Physical Address <span>*</span><input name="caregiverAddress" autocomplete="street-address" required></label>
+            <label>City <span>*</span><input name="caregiverCity" autocomplete="address-level2" required></label>
+            <label>Zip Code <span>*</span><input name="caregiverZip" inputmode="numeric" autocomplete="postal-code" pattern="[0-9]{5}(-[0-9]{4})?" maxlength="10" required></label>
+            <label>State<input name="caregiverState" value="MI" readonly aria-label="State Michigan"></label>
+            <label>County <span>*</span><input name="caregiverCounty" required></label>
+            <label>Phone <span>*</span><input name="caregiverPhone" type="tel" autocomplete="tel" required></label>
+            <label>Email <span>*</span><input name="caregiverEmail" type="email" autocomplete="email" required></label>
+            <label>Date of Birth <span>*</span><input name="caregiverDob" type="date" required></label>
+            <label>Social Security # <span>*</span><input name="caregiverSsn" type="password" inputmode="numeric" autocomplete="off" maxlength="11" placeholder="XXX-XX-XXXX" required></label>
+            <label class="full">Who do you provide care for? <span>*</span>
+              <select name="careRelationship" required>
+                <option value="">Select an option</option>
+                <option>My Father</option><option>My Mother</option><option>My Grandfather</option><option>My Grandmother</option>
+                <option>My Mother-In-Law</option><option>My Father In-Law</option><option>My Husband</option><option>My Wife</option>
+                <option>My Son</option><option>My Daughter</option><option>My Brother</option><option>My Sister</option>
+                <option>My Male Relative</option><option>My Female Relative</option><option>My Male Partner</option><option>My Female Partner</option>
+                <option>My Male Neighbor</option><option>My Female Neighbor</option>
+              </select>
+            </label>
+          </div>
+          <div class="authorization">
+            <h3>AUTHORIZATION</h3>
+            <label class="check-row"><input type="checkbox" name="backgroundAuthorization" required><span>I certify that the information provided above is accurate. I authorize In Home Help Agency to conduct a background check now and to automatically conduct future background checks without notice based on contractual requirements for as long as I serve as a paid caregiver for In Home Help Agency. <b>*</b></span></label>
+          </div>
+          <div class="form-actions"><button class="button secondary" type="button" data-prev>Previous</button><button class="button primary" type="button" data-next>Next</button></div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="form-step" data-step="2" aria-labelledby="section-three-title" hidden>
+          <h2 id="section-three-title">SECTION 3: CLIENT INFORMATION</h2>
+          <div class="field-grid two-col">
+            <label>Client First Name <span>*</span><input name="clientFirstName" required></label>
+            <label>Client Last Name <span>*</span><input name="clientLastName" required></label>
+            <label class="full">Physical Address <span>*</span><input name="clientAddress" required></label>
+            <label>City <span>*</span><input name="clientCity" required></label>
+            <label>Zip Code <span>*</span><input name="clientZip" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" maxlength="10" required></label>
+            <label>State<input name="clientState" value="MI" readonly aria-label="State Michigan"></label>
+            <label>County <span>*</span><input name="clientCounty" required></label>
+            <label>Phone <span>*</span><input name="clientPhone" type="tel" required></label>
+            <label>Email <span>*</span><input name="clientEmail" type="email" required></label>
+            <label>Date of Birth <span>*</span><input name="clientDob" type="date" required></label>
+            <label>Social Security # <span>*</span><input name="clientSsn" type="password" inputmode="numeric" autocomplete="off" maxlength="11" placeholder="XXX-XX-XXXX" required></label>
+            <label>Insurance Type <span>*</span>
+              <select name="insuranceType" required>
+                <option value="">Select an option</option><option>Aetna</option><option>Meridian</option><option>WellCare by Meridian</option>
+                <option>Molina</option><option>HAP CareSource</option><option>Humana</option><option>AmeriHealth</option>
+                <option>Priority Health</option><option>Medicare</option><option>Medicaid</option><option>Medicare &amp; Medicaid</option>
+              </select>
+            </label>
+            <label>Insurance ID Number <span>*</span><input name="insuranceId" required></label>
+          </div>
+
+          <div class="subsection">
+            <h3>ADDITIONAL INFORMATION</h3>
+            <div class="field-grid two-col">
+              <fieldset><legend>Do you need Medicaid? <span>*</span></legend><label class="inline-choice"><input type="radio" name="needsMedicaid" value="Yes" required> Yes</label><label class="inline-choice"><input type="radio" name="needsMedicaid" value="No"> No</label></fieldset>
+              <fieldset><legend>Do you have a Primary Care Doctor? <span>*</span></legend><label class="inline-choice"><input type="radio" name="hasPrimaryDoctor" value="Yes" required> Yes</label><label class="inline-choice"><input type="radio" name="hasPrimaryDoctor" value="No"> No</label></fieldset>
+              <label class="doctor-field full" hidden>Doctor Name<input name="doctorName"></label>
+              <label class="doctor-field" hidden>Doctor Phone or Fax #<input name="doctorPhoneFax" type="tel"></label>
+              <label class="full">Case Manager or Caseworker Name<input name="caseManagerName"></label>
+              <label>Case Manager or Caseworker Phone #<input name="caseManagerPhone" type="tel"></label>
+              <label>Case Manager or Caseworker Email Address<input name="caseManagerEmail" type="email"></label>
+            </div>
+          </div>
+          <div class="authorization final-authorization">
+            <label class="check-row"><input type="checkbox" name="homeHelpDeclaration" required><span>I wish to apply for home help services - adult services programs. I certify that the information I have given is correct. I acknowledge that I have read and agree to the application. <b>*</b></span></label>
+          </div>
+          <div class="form-actions"><button class="button secondary" type="button" data-prev>Previous</button><button class="button primary" type="submit" id="submit-button">Submit Application</button></div>
+        </section>
+
+        <section class="success-panel" id="success-panel" hidden aria-live="polite">
+          <div class="success-mark" aria-hidden="true">✓</div>
+          <h2>Application Submitted</h2>
+          <p>Thank you for applying with In Home Help Agency. Your application has been received.</p>
+          <p>For any questions or concerns, please contact our office at <a href="tel:2482751102">248 275 1102</a>.</p>
+        </section>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+      </form>
+      <footer class="page-footer">For any questions or concerns, please contact our office at <a href="tel:2482751102">248 275 1102</a></footer>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
